@@ -1,7 +1,6 @@
 import json
 import sys
 from typing import Dict
-
 from src.PriceBasket import PriceBasket
 
 FILE = 'products.json'

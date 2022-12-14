@@ -6,6 +6,7 @@ from typing import Dict, List
 class PriceBasket:
     def __init__(self, prices: Dict) -> None:
         for k, v in prices.items():
+            # using Decimal to store exact price values
             prices[k] = Decimal(str(v))
         self.prices = prices
         self.products = defaultdict(int)
@@ -28,6 +29,7 @@ class PriceBasket:
         loafs = self.products['Bread']
         discountable = self.products['Soup'] // 2
         discounted = 0
+        # counts how many loafs of bread can be discount for each pair of soup tins
         while discountable > 0 and loafs > 0:
             discounted += 1
             discountable -= 1
