@@ -14,5 +14,10 @@ def load_products_prices(file: str) -> Dict[str, float]:
 if __name__ == '__main__':
     prices = load_products_prices(FILE)
     basket = PriceBasket(prices)
-    basket.load_products(sys.argv[1:])
-    basket.print_bill()
+    try:
+        basket.load_products(sys.argv[1:])
+    except ValueError as e:
+        print(f'Wrong value for product: {e}')
+        print('Available products:', ','.join(prices.keys()))
+    else:
+        basket.print_bill()

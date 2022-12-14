@@ -13,6 +13,8 @@ class PriceBasket:
 
     def load_products(self, products: List) -> None:
         for prod in products:
+            if prod not in self.prices:
+                raise ValueError(prod)
             self.products[prod] += 1
 
     def __get_subtotal(self) -> Decimal:
