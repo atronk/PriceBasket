@@ -8,4 +8,4 @@ To launch the program, follow the steps:
 3. Optionally: set up the virtual environment with <code>python3 -m venv ./env</code> and start it with the script. On windows: <code>.\env\Scripts\activate</code> , on Mac/Linux: <code>source ./env/bin/activate</code> .
 4. Install packages with <code>pip install -r requirements.txt</code>
 5. Run the tests: <code>python -m pytest .</code>
-6. Run the program: <code>python main.py Apple Bread Milk Soup</code>
+6. Run the program: <code>python main.py Apples Bread Milk Soup</code>
